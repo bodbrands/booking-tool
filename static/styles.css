@@ -1,0 +1,266 @@
+/* General styles */
+body {
+    font-family: 'Lato', sans-serif; /* Modern, clean font */
+    background: #f4f4f4; /* Light grey background for the page */
+    padding: 10px; /* Reduce padding */
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px; /* Wider container for better layout */
+    background: #fff; /* White background for the form area */
+    padding: 20px; /* Reduce padding */
+    margin: 20px auto; /* Reduce vertical space */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    border-radius: 10px; /* Rounded corners */
+}
+
+h1.header {
+    font-size: 24px; /* Slightly smaller header size */
+    text-align: center;
+    margin-bottom: 20px; /* Reduce space below the header */
+    color: #333; /* Dark grey for readable text */
+}
+
+/* Form element styling */
+.form-group {
+    margin-bottom: 15px; /* Space below each form group */
+}
+
+label {
+    display: block;
+    margin-bottom: 8px; /* Space below each label */
+    color: #333; /* Dark grey for text for readability */
+    font-size: 14px; /* Slightly smaller font size for readability */
+}
+
+select.form-control, button.btn-primary {
+    width: 100%;
+    padding: 10px; /* Adjust padding */
+    margin-top: 8px; /* Standardized margin for all form elements */
+    border: 1px solid #ccc; /* Lighter border color */
+    border-radius: 4px; /* Rounded corners for form elements */
+    box-sizing: border-box; /* Adjusts box model to include padding and border */
+    font-size: 14px; /* Adjust font size for better readability */
+    cursor: pointer; /* Indicates that the element is interactive */
+}
+
+/* Specific styles for buttons */
+button.btn-primary {
+    color: white; /* White text for buttons */
+    background-color: #007BFF; /* Blue background for buttons */
+    border: none; /* No border for a cleaner look */
+    padding: 12px; /* Adjust padding */
+    font-size: 16px; /* Adjust font size for buttons */
+    margin-top: 20px; /* Adjust space above the button */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+button.btn-primary:hover {
+    background-color: #0056b3; /* Darker blue on hover for the button */
+}
+
+/* Calendar styling */
+#calendar-container {
+    margin: 15px 0; /* Space around the calendar container */
+    overflow-x: auto; /* Allows horizontal scrolling on smaller screens */
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px; /* Space below the calendar header */
+}
+
+#monthAndYear {
+    font-size: 18px; /* Adjust font size for the month and year */
+    color: #333; /* Dark grey for readability */
+}
+
+#calendar {
+    width: 100%; /* Full width of its container */
+    border-collapse: collapse; /* Borders are collapsed into a single border */
+    table-layout: fixed; /* Fixed table layout for equal column sizing */
+}
+
+#calendar th, #calendar td {
+    border: 1px solid #ddd; /* Subtle border for cells */
+    padding: 12px; /* Adequate padding for cell content */
+    text-align: center;
+    vertical-align: middle; /* Centers content vertically within cells */
+}
+
+#calendar td:hover {
+    background-color: #f0f0f0; /* Light grey background on hover for cells */
+}
+
+.selected-day {
+    background-color: #90CAF9; /* Light blue background for the selected day */
+    color: white;
+}
+
+.selected-range {
+    background-color: #B3E5FC; /* Lighter blue background for the selected range */
+}
+
+/* Styles for the booking popup */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background: white;
+    border: 1px solid #ccc;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    border-radius: 10px; /* Rounded corners */
+    max-width: 500px; /* Adjusted max width for larger screens */
+    width: 90%; /* Ensure responsiveness on smaller screens */
+}
+
+.popup h2 {
+    margin-top: 0; /* No margin at the top of the heading */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.popup label {
+    margin-top: 10px; /* Space above the label */
+}
+
+/* Existing styles */
+
+.popup input[type="text"]:invalid {
+    border: 2px solid red; /* Highlight invalid fields in red */
+}
+
+/* Ensure all popup input fields have the same size and styling */
+.popup input[type="text"] {
+    width: calc(100% - 22px); /* Full width minus padding and border */
+    padding: 10px;
+    margin-top: 10px; /* Space above the input field */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.popup button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px; /* Space above each button */
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.popup button:hover {
+    background-color: #0056b3;
+}
+
+/* Styles for time buttons */
+.timeButton {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.timeButton:hover {
+    background-color: #0056b3;
+}
+
+/* Styles for the availability container */
+#availabilityContainer {
+    margin-top: 20px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    border-radius: 10px; /* Rounded corners */
+    text-align: center; /* Center align the text */
+}
+
+.date {
+    font-size: 20px; /* Adjust font size for dates */
+    margin-bottom: 15px; /* Space below each date */
+    padding: 10px; /* Padding around the date */
+    background-color: #f0f8ff; /* Light blue background for the date section */
+    border-radius: 10px; /* Rounded corners */
+    color: #333; /* Dark grey for readability */
+    border: 1px solid #ddd; /* Border around the date section */
+}
+
+.staff {
+    margin-bottom: 15px; /* Space below each staff section */
+}
+
+.staff h3 {
+    margin-bottom: 10px; /* Space below the staff name */
+    color: #007BFF; /* Blue color for staff name */
+}
+
+.times {
+    display: flex;
+    justify-content: center; /* Center align the times */
+    flex-wrap: wrap; /* Wrap the times to the next line */
+    padding: 10px; /* Padding around the times section */
+    background-color: #fafafa; /* Light grey background for the times section */
+    border-radius: 10px; /* Rounded corners */
+    border: 1px solid #ddd; /* Border around the times section */
+}
+
+.loading-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background: white;
+    border: 1px solid #ccc;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    font-size: 18px;
+    text-align: center;
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px; /* Adjust padding for mobile */
+        margin: 10px auto; /* Adjust margin for mobile */
+    }
+    
+    h1.header {
+        font-size: 22px; /* Adjust header size for mobile */
+    }
+    
+    #calendar th, #calendar td {
+        padding: 8px; /* Adjust padding for mobile */
+    }
+    
+    .popup {
+        padding: 15px; /* Adjust padding for mobile */
+        max-width: 90%; /* Ensure the pop-up doesn't exceed the screen width */
+    }
+    
+    .popup input[type="text"] {
+        width: calc(100% - 20px); /* Adjust width for mobile */
+    }
+    
+    .popup button {
+        padding: 12px; /* Adjust padding for mobile */
+        font-size: 14px; /* Adjust font size for mobile */
+    }
+}
